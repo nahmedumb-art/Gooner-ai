@@ -1,0 +1,10 @@
+{
+  "name": "Goooner AI",
+  "description": "Goooner AI — An intelligent coding, research, and reasoning workspace with live streaming responses, code canvas previews, and web search grounding.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

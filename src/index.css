@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Subtle custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Clean Markdown typography */
+.goooner-prose {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.goooner-prose > *:first-child {
+  margin-top: 0;
+}
+
+.goooner-prose > *:last-child {
+  margin-bottom: 0;
+}
+
+.goooner-prose p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.goooner-prose h1,
+.goooner-prose h2,
+.goooner-prose h3,
+.goooner-prose h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.goooner-prose h1 { font-size: 1.375rem; }
+.goooner-prose h2 { font-size: 1.1875rem; }
+.goooner-prose h3 { font-size: 1.0625rem; }
+
+.goooner-prose ul,
+.goooner-prose ol {
+  margin-top: 0.625rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.375rem;
+}
+
+.goooner-prose ul {
+  list-style-type: disc;
+}
+
+.goooner-prose ol {
+  list-style-type: decimal;
+}
+
+.goooner-prose li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.goooner-prose blockquote {
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(148, 163, 184, 0.06);
+}
+
+.goooner-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.goooner-prose th,
+.goooner-prose td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  text-align: left;
+}
+
+.goooner-prose th {
+  font-weight: 600;
+}
+
+.goooner-prose a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .goooner-prose a {
+  color: #60a5fa;
+}
+
+.goooner-prose hr {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.goooner-prose .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+  margin: 0.75rem 0;
+}
+
+.goooner-prose .katex {
+  font-size: 1.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
